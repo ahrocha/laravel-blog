@@ -13,8 +13,7 @@
         <p>{{ $message }}</p>
     </div>
     @endif
-        @if (count($posts) > 0)
-    @foreach ($posts as $post)
+
         <div class="row">
             <div class="col-12">
                 <div class="row">
@@ -23,15 +22,15 @@
                     </div>
                     <div class="col-10">
                         <h4>{{$post->title}}</h4>
-                        <h4><a href="/posts/{{$post->slug}}">ver</a></h4>
                     </div>
                 </div>
+                @if(!empty($post->image))
+                    <img src="{{$post->image}}" alt="{{$post->title}}" style="max-width: 30%; float: right;" />
+                @endif
+                <p>{!! nl2br(e($post->description)) !!}</p>
                 <hr>
             </div>
         </div>
-    @endforeach
-    @else
-        <p>No Posts found</p>
-    @endif
+
 </div>
 @endsection

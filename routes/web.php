@@ -19,5 +19,7 @@ Route::resource('/', PostController::class)->names([
     'index' => 'posts.index',
     'create' => 'posts.create',
     'store' => 'posts.store',
-    'show' => 'posts.show',
-  ]);
+    // 'show' => 'posts.show',
+]);
+
+Route::get('/posts/{slug}', 'App\Http\Controllers\PostController@show');
