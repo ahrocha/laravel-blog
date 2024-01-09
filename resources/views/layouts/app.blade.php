@@ -26,7 +26,7 @@
 <!-- Footer -->
 <footer class="footer mt-auto py-3 bg-dark">
   <div class="container d-lg-flex justify-content-between">
-    <span class="text-light">Mini-Blog © 2023</span>
+    <span class="text-light">Mini-Blog © 2024</span>
   </div>
 </footer>
 

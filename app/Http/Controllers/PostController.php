@@ -20,6 +20,8 @@ class PostController extends Controller
 
     public function show($slug) {
         $post = Post::where('slug', $slug)->firstOrFail();
+        $post->images = $post->getImagesFromDescription();
+        $post->description = $post->getDescriptionWithoutImages();
         return view('posts.show', compact('post'));
     }
 }

@@ -28,6 +28,9 @@
                     <img src="{{$post->image}}" alt="{{$post->title}}" style="max-width: 30%; float: right;" />
                 @endif
                 <p>{!! nl2br(e($post->description)) !!}</p>
+                @foreach($post->images as $image)
+                    <div style="max-width: 200px;">{!! $image !!}</div>
+                @endforeach
                 <hr>
             </div>
         </div>
